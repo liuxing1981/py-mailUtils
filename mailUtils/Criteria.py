@@ -52,7 +52,6 @@ class Criteria:
         temp.extend(query)
         self.query = [[]]
         self.query[0].append(temp)
-        # print(self.query)
         return self
 
     def getQuery(self):
@@ -95,12 +94,16 @@ class Criteria:
     def findByFlagged(self):
         return [ 'FLAGGED' ]
 
-
-# criteria=Criteria()
-# query1 = criteria.findByDateFrom('2020-01-08')
-# query2 = criteria.findBySenders('kelly','maggie')
-# query3 = criteria.findByFlagged()
-# criteria.and_(query1)
-# criteria.not_(query2)
-# criteria.not_(query3)
-# print(criteria.getQuery())
+if __name__ == '__main__':
+    criteria=Criteria()
+    query1 = criteria.findBySenders('kelly')
+    query2 = criteria.findByDateFrom('2020-01-08')
+    criteria.and_(query1).and_(query2)
+    # query1 = criteria.findByDateFrom('2020-01-08')
+    # query2 = criteria.findBySenders('kelly','maggie')
+    # query3 = criteria.findByFlagged()
+    # criteria.and_(query1)
+    # criteria.not_(query2)
+    # criteria.not_(query3)
+    print(criteria.getQuery())
+>>>>>>> init
