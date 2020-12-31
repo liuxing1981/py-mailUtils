@@ -106,4 +106,3 @@ if __name__ == '__main__':
     # criteria.not_(query2)
     # criteria.not_(query3)
     print(criteria.getQuery())
->>>>>>> init
