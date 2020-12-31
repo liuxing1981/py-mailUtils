@@ -56,10 +56,17 @@ mail = Mail()
 mail.From = 'your@qq.com'
 mail.To = mail.From
 mail.Subject = 'Test mail'
+
+# send text mail
 mail.Content = '''
 Hello world
 This is a test mail
 '''
+
+# send html mail
+mail.htmlPath = 'e:\\report.html'
+
+# with attachments
 mail.attachments = ['e:\\hss.schema.modify.ldif']
 # send mail
 client.send_mail(mail)

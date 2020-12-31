@@ -5,9 +5,13 @@ class Mail:
     Date = ''
     Content = ''
     attachments = []
-    Type = 'plain'
+    Type = 'plain' # or 'html'
     charset = 'utf-8'
     uid = ''
+    # for send html mail
+    htmlPath = ''
+    # store mail message
+    message = None
 
     def __str__(self) -> str:
         result = """
